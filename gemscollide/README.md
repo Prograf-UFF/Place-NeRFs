@@ -101,7 +101,7 @@ $ cd <hilai360nerf-dir>/hilai360/gemscollide
 $ docker run --rm -it -v $PWD:/workspace gemscollide:latest bash
 $ cd /workspace
 $ bash build.sh
-$ export PYTHONPATH="$PYTHONPATH:/usr/local/lib/gemscollide/python/3.10"
+$ export PYTHONPATH="$PYTHONPATH:/usr/local/lib/gemscollide/python/3.8"
 ```
 Revisar a versao do python: export PYTHONPATH="$PYTHONPATH:/usr/local/lib/gemscollide/python/$VERSAO"
 

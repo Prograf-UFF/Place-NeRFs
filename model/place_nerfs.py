@@ -8,7 +8,8 @@ import numpy as np
 from typing import Callable, List, Tuple, Any
 from gemscollide import collide
 
-from utils.collide_utils import qvec2rotmat, camera_pyramid
+from utils.collide_utils import camera_pyramid
+from utils.colmap_read_model import qvec2rotmat
 
 
 
@@ -94,7 +95,7 @@ class PlaceNeRFGraph(Callable[[], List[Any]]):
         self.edge_node = list()
         start = time.time()
         if plant_id is not None:
-            pass
+            pass #TODO using photosfers
         else: # Public datasets
             self._public_process(frames, threshold, min_distance*4., place_nerfs_path_result, cam_intrinsics)
         print(f"   **TIME Building the visivility graph: {time.time()-start}")
@@ -160,7 +161,7 @@ class PlaceNeRFGraph(Callable[[], List[Any]]):
                 nerf_frames.append({'resource_id':node ,'new_node': is_new_node, 'world_position': frames_dict[node]['world_position']}) 
                 # Geramos oss views para cada fotosfera
                 if plant_id is not None: # nerf_views - pode ser util em ambemtes industrials
-                    pass
+                    pass #TODO using photosfers
                     
             nerfs.append({'unit_id': unit_id, 
                     'plant_id': plant_id,
@@ -219,4 +220,4 @@ class PlaceNeRFGraph(Callable[[], List[Any]]):
             
             return divided_subregions, {}
         else:
-            pass
+            pass #TODO using photosfers
