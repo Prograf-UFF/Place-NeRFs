@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm -r build/
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Release ..
+cmake --build . --config Release --parallel 8 --target install

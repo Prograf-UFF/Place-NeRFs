@@ -1,0 +1,14 @@
+# Copyright (C) 2019 Leandro Augusto Frata Fernandes
+# 
+# authors    : TODO
+# 
+# repository : https://github.com/erich666/GraphicsGems/blob/master/gemsiv/collide.c
+# 
+# C code from the article
+# "Fast Collision Detection of Moving Convex Polyhedra"
+# by Rich Rabbitz, rrabbitz%pgn138fs@serling.motown.ge.com
+# in "Graphics Gems IV", Academic Press, 1994
+#
+#
+
+set(GEMSCOLLIDE_INCLUDE_DIRS "@CMAKE_INSTALL_PREFIX@/include")
